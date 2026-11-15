@@ -1,0 +1,86 @@
+/*comentario*/
+html{
+    background-color: rgb(129, 123, 123);
+}
+h1{
+font-family: initial;/*no ereda de ningun lado*/
+color: rgb(252, 252, 252);
+font-size: 50px;
+text-align: center;
+text-shadow: 2px 2px 5px gray;/*efecto de sombra*/
+/*cuadro de color*/
+background-color: rgb(43, 128, 226);
+padding: 40px;
+border: 3px solid black;
+margin: 20px;
+height: 80px;
+}
+
+.parrafo1{/*color de parrafo con clase*/
+color: rgb(254, 255, 255);
+}
+
+body{/*fuente*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border: solid 5px rgb(43, 128, 226);
+    
+}
+
+p, li{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a:hover{/*efecto al pasar el mouse por encima*/
+    color: red;
+}
+
+input[type="text"]:focus{/*efecto al hacer click en el input*/
+    border-color: blue;
+    outline: 2px solid rgb(202, 7, 209);
+    border-radius: 5px;
+}
+
+html{/*centrar el contenido*/
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+}
+
+video{
+    display: block;
+    margin: 0 auto;
+}
+
+audio{
+    display: block;
+    margin: 0 auto;
+}
+
+button{
+    font-size: 16px;
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #1c2883;
+    color:chartreuse;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #0d1a4c;
+    cursor: pointer;
+}
+
+iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
+
+}

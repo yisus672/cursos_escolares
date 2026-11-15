@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi pagina web multimedia</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Bienvenido a mi pagina web multimedia</h1>  
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="evento.html">Evento</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+            </ul>   
+        </nav>
+    </header>
+
+    <section>
+        <h2>Galería de imágenes</h2>
+       <figure>
+        <img src="imagenes/Auto1.jpg" alt="Auto" width="500" height="300">
+        <figcaption>Auto</figcaption>
+       </figure>
+    </section>
+
+    <section>
+        <h2>Galería de videos</h2>
+        <video width="500" height="300" controls>
+            <source src="video/Vid1.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <video width="500" height="300" controls>
+            <source src="video/TUN.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+    </section>
+
+    <section>
+        <h2>Galería de audio</h2>
+        <audio controls>
+            <source src="audio/JDM.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+    </section> 
+
+    <section>
+        <h3>Video de YouTube</h3>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/S0vJpM4ncCg?si=i_WEo91GCwWYK7UK&amp;start=16" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+</body>
+</html>

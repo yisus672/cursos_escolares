@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento de autos</title>
+    <meta name="robots" content="noindex, nofollow">
+    <title> Evento de autos</title>
+    <link rel="icon" href="imagenes/racing.png" type="image/png">
+    <link rel="stylesheet" href="css/estilos.css">
+
 </head>
 <body>
       <nav>
@@ -43,6 +47,43 @@
 
             <input type="color">
         </fieldset>
+        <fieldset> 
+            <legend>Eventos</legend>
+            <label for="evento">Selecciona un evento:</label>
+            <select name="evento" id="evento">
+                <option value="evento1">Expo de Autos</option>
+                <option value="evento2">Arrancones 1/4 de milla</option>
+                <option value="evento3">Competicion SPL</option>
+                <input type="submit" value="Enviar">
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Ubicacion de los eventos</legend>
+            <label for="Ubicacion">Ubicación:</label><br>
+            <input list="Ubicaciones" name="Ubicacion" id="Ubicacion" required>
+            <datalist id="Ubicaciones">
+                <option value="Ixtlayork">
+                <option value="Jiquiyork">
+                <option value="Toluca">
+            </datalist>
+            <input type="submit" value="Enviar">
+        </fieldset>
+
     </form>
+
+</section>
+<h2>Galeria de fotos del evento</h2>
+<details>
+    <summary>Ver fotos</summary>
+    <div>
+        <p>Galeria de fotos del evento</p>
+        <img src="https://www.quepasaweb.com.ar/wp-content/uploads/2025/04/exposicion-automotor-tigre.jpeg" alt="Foto 1" width="300" height="200">      
+        <img src="https://acnews.blob.core.windows.net/imgnews/paragraph/NPAZ_3708d87084004db78fa0bc7cebe23d98.jpg" alt="Foto 2" width="300" height="200">
+        <img src="https://cdn.shopify.com/s/files/1/0650/4595/4731/files/2-65690ddacc6b3.jpg" alt="Foto 3" width="300" height="200">
+    </div>
+</details>
+<section>
+
 </section>
 </html>
