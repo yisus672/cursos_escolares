@@ -4,86 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title> Evento de autos</title>
+    <title>Evento de autos</title>
     <link rel="icon" href="imagenes/racing.png" type="image/png">
     <link rel="stylesheet" href="css/estilos.css">
-
+    <script src="evento.js" defer></script>
 </head>
 <body>
-      <nav>
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="evento.html">Evento</a></li>
-        <li><a href="multimedia.html">Multimedia</a></li>
-    </ul>
-</nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="evento.html">Evento</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Registrarte al siguiente evento.</h1>
+            <p>Por favor, completa el formulario para registrarte en el evento.</p>
+
+            <form id="form-registro-evento" novalidate>
+                <fieldset>
+                    <legend>Registro para el evento</legend>
+
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" aria-describedby="error-nombre">
+                        <span id="error-nombre" class="error-campo" aria-live="polite"></span>
+                    </div>
+
+                    <div>
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" aria-describedby="error-email">
+                        <span id="error-email" class="error-campo" aria-live="polite"></span>
+                    </div>
+
+                    <div>
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" name="edad" aria-describedby="error-edad">
+                        <span id="error-edad" class="error-campo" aria-live="polite"></span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Género</legend>
+                    <div>
+                        <input type="radio" name="genero" value="masculino" id="masculino" aria-describedby="error-genero">
+                        <label for="masculino">Masculino</label>
+
+                        <input type="radio" name="genero" value="femenino" id="femenino" aria-describedby="error-genero">
+                        <label for="femenino">Femenino</label>
+                    </div>
+                    <span id="error-genero" class="error-campo" aria-live="polite"></span>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Eventos y ubicación</legend>
+
+                    <div>
+                        <label for="evento">Selecciona un evento:</label>
+                        <select name="evento" id="evento" aria-describedby="error-evento">
+                            <option value="">-- Selecciona una opción --</option>
+                            <option value="Expo de Autos">Expo de Autos</option>
+                            <option value="Arrancones 1/4 de milla">Arrancones 1/4 de milla</option>
+                            <option value="Competicion SPL">Competicion SPL</option>
+                        </select>
+                        <span id="error-evento" class="error-campo" aria-live="polite"></span>
+                    </div>
+
+                    <div>
+                        <label for="ubicacion">Ubicación:</label>
+                        <input list="ubicaciones" name="ubicacion" id="ubicacion" aria-describedby="error-ubicacion">
+                        <datalist id="ubicaciones">
+                            <option value="Ixtlayork">
+                            <option value="Jiquiyork">
+                            <option value="Toluca">
+                        </datalist>
+                        <span id="error-ubicacion" class="error-campo" aria-live="polite"></span>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div id="estado-general" role="status" aria-live="polite"></div>
+            <pre id="resumen-json"></pre>
+        </section>
+
+        <section>
+            <h2>Galeria de fotos del evento</h2>
+            <details>
+                <summary>Ver fotos</summary>
+                <div>
+                    <p>Galeria de fotos del evento</p>
+                    <img src="https://www.quepasaweb.com.ar/wp-content/uploads/2025/04/exposicion-automotor-tigre.jpeg" alt="Foto 1" width="300" height="200">
+                    <img src="https://acnews.blob.core.windows.net/imgnews/paragraph/NPAZ_3708d87084004db78fa0bc7cebe23d98.jpg" alt="Foto 2" width="300" height="200">
+                    <img src="https://cdn.shopify.com/s/files/1/0650/4595/4731/files/2-65690ddacc6b3.jpg" alt="Foto 3" width="300" height="200">
+                </div>
+            </details>
+        </section>
+    </main>
 </body>
-<header>
-
-</header>
-
-<section>
-    <h1>Registrarte al siguiente evento.</h1>
-    <p>Por favor, completa el formulario para registrarte en el evento.</p>
-
-    <form action="/index.html" method="post">
-        <fieldset>
-            <legend>Registro para el evento</legend>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required><br><br>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            <label for="edad">Edad:</label>
-            <input type="number" name="edad" id="edad"  required><br><br>
-            <input type="submit" value="Enviar">
-        </fieldset>
-        <fieldset> 
-            <legend> Género </legend>
-            <label for="masculino">Masculino</label>
-            <input type="radio" name="genero" value="masculino" id="masculino">
-
-            <label for="femenino">Femenino</label>
-            <input type="radio" name="genero" value="femenino" id="femenino">
-
-            <input type="color">
-        </fieldset>
-        <fieldset> 
-            <legend>Eventos</legend>
-            <label for="evento">Selecciona un evento:</label>
-            <select name="evento" id="evento">
-                <option value="evento1">Expo de Autos</option>
-                <option value="evento2">Arrancones 1/4 de milla</option>
-                <option value="evento3">Competicion SPL</option>
-                <input type="submit" value="Enviar">
-            </select>
-        </fieldset>
-
-        <fieldset>
-            <legend>Ubicacion de los eventos</legend>
-            <label for="Ubicacion">Ubicación:</label><br>
-            <input list="Ubicaciones" name="Ubicacion" id="Ubicacion" required>
-            <datalist id="Ubicaciones">
-                <option value="Ixtlayork">
-                <option value="Jiquiyork">
-                <option value="Toluca">
-            </datalist>
-            <input type="submit" value="Enviar">
-        </fieldset>
-
-    </form>
-
-</section>
-<h2>Galeria de fotos del evento</h2>
-<details>
-    <summary>Ver fotos</summary>
-    <div>
-        <p>Galeria de fotos del evento</p>
-        <img src="https://www.quepasaweb.com.ar/wp-content/uploads/2025/04/exposicion-automotor-tigre.jpeg" alt="Foto 1" width="300" height="200">      
-        <img src="https://acnews.blob.core.windows.net/imgnews/paragraph/NPAZ_3708d87084004db78fa0bc7cebe23d98.jpg" alt="Foto 2" width="300" height="200">
-        <img src="https://cdn.shopify.com/s/files/1/0650/4595/4731/files/2-65690ddacc6b3.jpg" alt="Foto 3" width="300" height="200">
-    </div>
-</details>
-<section>
-
-</section>
 </html>
